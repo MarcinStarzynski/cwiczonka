@@ -26,13 +26,11 @@ const employees = {
     salary: 4000
   },
 };
-console.log(employees);
 
 const employeesNames = [];
 const employeesSalaries = [];
 
 for(let employee in employees){
-  console.log(employees[employee]);
 
   const name = employees[employee].name.split(' ')[0];
 
@@ -40,4 +38,23 @@ for(let employee in employees){
   employeesSalaries.push(employees[employee].salary);
 }
 
-console.log('Ćwiczenie drugie: ', employeesNames, employeesSalaries);
+//console.log('Ćwiczenie drugie: ', employeesNames, employeesSalaries);
+
+//Ćwiczenie 3
+const salaries = [2000, 3000, 1500, 6000, 3000];
+
+let numberSum = 0;
+let biggestNumber = 0;
+let smallestNumber = Infinity;
+
+for(let number in salaries){
+  numberSum += salaries[number];
+  if( biggestNumber <= salaries[number]){
+    biggestNumber = salaries[number];
+  }
+  if( smallestNumber >= salaries[number]){
+    smallestNumber = salaries[number];
+  }
+}
+
+console.log('Ćwiczenie trzecie', 'Suma tablicy: ', numberSum, 'Najwyższa pensja: ', biggestNumber, 'Najniższa pensja: ', smallestNumber );
