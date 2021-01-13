@@ -146,14 +146,31 @@ propertyFunction(obj);
 console.log('________________________________________');
 
 //Ćwiczenie 6
-const tagsArray = ['news', 'code', 'doggo', 'news', 'sport', 'hot', 'news', 'code'];
+const array = ['news', 'code', 'doggo', 'news', 'sport', 'hot', 'news', 'code'];
 
 function forEach( array, callback) {
   for(const tag of array) {
     callback = tag.split('');
-    console.log(callback);
+    console.log('Ćwiczenie szóste', callback);
   }
 }
-forEach(tagsArray);
+forEach(array);
 console.log('________________________________________');
 //Ćwiczenie 7
+const formatName = function(someone) {
+  let fullName = '';
+  let name = someone.split(' ');
+  for(let word of name){
+    const firstLetter = word.charAt(0);
+    const transform = firstLetter.toUpperCase();
+    const restLetters = word.substring(1);
+    const transformRest = restLetters.toLowerCase();
+    word = transform + transformRest;
+    fullName = fullName + word + ' ';
+  }
+  return fullName;
+};
+const person = 'aMAnDA dOE';
+console.log('Ćwiczenie siódme: ', formatName(person));
+console.log('________________________________________');
+//Ćwicznie 8
