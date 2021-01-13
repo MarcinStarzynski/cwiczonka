@@ -49,12 +49,39 @@ let smallestNumber = Infinity;
 
 for(let number in salaries){
   numberSum += salaries[number];
-  if( biggestNumber <= salaries[number]){
+  if( biggestNumber < salaries[number]){
     biggestNumber = salaries[number];
   }
-  if( smallestNumber >= salaries[number]){
+  if( smallestNumber > salaries[number]){
     smallestNumber = salaries[number];
   }
 }
 
-console.log('Ćwiczenie trzecie', 'Suma tablicy: ', numberSum, 'Najwyższa pensja: ', biggestNumber, 'Najniższa pensja: ', smallestNumber );
+//console.log('Ćwiczenie trzecie', 'Suma tablicy: ', numberSum, 'Najwyższa pensja: ', biggestNumber, 'Najniższa pensja: ', smallestNumber );
+
+//Ćwiczenie 4
+const persons = {
+  john: 2000,
+  amanda: 3000,
+  thomas: 1500,
+  james: 6000,
+  claire: 3000,
+};
+
+const values = Object.values(persons);
+
+let valuesSum = 0;
+let biggestValue = 0;
+let smallestValue = Infinity;
+
+for(let number in values){
+  valuesSum += values[number];
+  if( biggestValue < values[number]){
+    biggestValue = values[number];
+  }
+  if( smallestValue > values[number]){
+    smallestValue = values[number];
+  }
+}
+console.log('Ćwiczenie Czwarte', 'Suma tablicy: ', valuesSum, 'Najwyższa pensja: ', biggestValue, 'Najniższa pensja: ', smallestValue );
+
