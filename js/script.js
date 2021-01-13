@@ -135,11 +135,25 @@ const obj = {
   lastName: 'Doe'
 };
 
-function propertyFunction(obj){
+const propertyFunction = function (obj){
   for(let paramId in obj){
     const param = obj[paramId];
     console.log('Ćwiczenie piąte: ',paramId + ': ' + param);
   }
-}
+};
 
 propertyFunction(obj);
+console.log('________________________________________');
+
+//Ćwiczenie 6
+const tagsArray = ['news', 'code', 'doggo', 'news', 'sport', 'hot', 'news', 'code'];
+
+function forEach( array, callback) {
+  for(const tag of array) {
+    callback = tag.split('');
+    console.log(callback);
+  }
+}
+forEach(tagsArray);
+console.log('________________________________________');
+//Ćwiczenie 7
