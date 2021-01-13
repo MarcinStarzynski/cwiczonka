@@ -130,4 +130,16 @@ console.log('Ćwiczenie czwarte: ', filteredEmployees);
 console.log('________________________________________');
 
 //Ćwiczenie 5
+const obj = {
+  firstName: 'John',
+  lastName: 'Doe'
+};
 
+function propertyFunction(obj){
+  for(let paramId in obj){
+    const param = obj[paramId];
+    console.log('Ćwiczenie piąte: ',paramId + ': ' + param);
+  }
+}
+
+propertyFunction(obj);
