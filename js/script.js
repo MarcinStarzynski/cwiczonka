@@ -1,3 +1,4 @@
+'use strict';
 //Ćwiczenie 1
 const names = ['Kasia', 'Tomek', 'Amanda', 'Maja', 'Julianna', 'Czesław'];
 
@@ -13,7 +14,8 @@ for (let item of singleItems){
   }
 }
 
-//console.log('Ćwiczenie pierwsze: ', femaleNames);
+console.log('Ćwiczenie pierwsze: ', femaleNames);
+console.log('________________________________________');
 
 //Ćwiczenie 2
 const employees = {
@@ -38,7 +40,8 @@ for(let employee in employees){
   employeesSalaries.push(employees[employee].salary);
 }
 
-//console.log('Ćwiczenie drugie: ', employeesNames, employeesSalaries);
+console.log('Ćwiczenie drugie: ', employeesNames, employeesSalaries);
+console.log('________________________________________');
 
 //Ćwiczenie 3
 const salaries = [2000, 3000, 1500, 6000, 3000];
@@ -57,7 +60,8 @@ for(let number in salaries){
   }
 }
 
-//console.log('Ćwiczenie trzecie', 'Suma tablicy: ', numberSum, 'Najwyższa pensja: ', biggestNumber, 'Najniższa pensja: ', smallestNumber );
+console.log('Ćwiczenie trzecie: ', 'Suma tablicy: ', numberSum, 'Najwyższa pensja: ', biggestNumber, 'Najniższa pensja: ', smallestNumber );
+console.log('________________________________________');
 
 //Ćwiczenie 4
 const persons = {
@@ -83,5 +87,19 @@ for(let number in values){
     smallestValue = values[number];
   }
 }
-console.log('Ćwiczenie Czwarte', 'Suma tablicy: ', valuesSum, 'Najwyższa pensja: ', biggestValue, 'Najniższa pensja: ', smallestValue );
+console.log('Ćwiczenie Czwarte: ', 'Suma tablicy: ', valuesSum, 'Najwyższa pensja: ', biggestValue, 'Najniższa pensja: ', smallestValue );
+console.log('________________________________________');
+
+//Ćwiczenie 5
+const tags = ['news', 'code', 'news', 'sport', 'hot', 'news', 'code'];
+
+let uniqueTags = {};
+
+for(let tag of tags) {
+  if(!uniqueTags[tag]) uniqueTags[tag] = {appearances: 1};
+  else uniqueTags[tag].appearances++;
+}
+
+console.log('Ćwiczenie Piąte: ', uniqueTags);
+console.log('________________________________________');
 
