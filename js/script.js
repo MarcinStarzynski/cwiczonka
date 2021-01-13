@@ -1,4 +1,5 @@
 'use strict';
+console.log('Tablice i Obiekty');
 //Ćwiczenie 1
 const names = ['Kasia', 'Tomek', 'Amanda', 'Maja', 'Julianna', 'Czesław'];
 
@@ -102,4 +103,31 @@ for(let tag of tags) {
 
 console.log('Ćwiczenie Piąte: ', uniqueTags);
 console.log('________________________________________');
+console.log('________________________________________');
+console.log('Praca z funkcjami');
+
+//Ćwiczenie 4
+const employees1 = [
+  { name: 'Amanda Doe', salary: 3000 },
+  { name: 'John Doe', salary: 4000 },
+  { name: 'Claire Downson', salary: 2000 },
+  { name: 'Freddie Clarkson', salary: 6000 },
+  { name: 'Thomas Delaney', salary: 8200 }
+];
+
+const filterEmployees = function(array , minValue, maxValue){
+  for(let employeeSingle of array){
+    if(employeeSingle.salary <= minValue || employeeSingle.salary >= maxValue){
+      const index = array.indexOf(employeeSingle);
+      array.splice(index, 1);
+    }
+  }
+  return array;
+};
+
+const filteredEmployees = filterEmployees(employees1, 2000, 8000);
+console.log('Ćwiczenie czwarte: ', filteredEmployees);
+console.log('________________________________________');
+
+//Ćwiczenie 5
 
