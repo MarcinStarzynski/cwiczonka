@@ -196,3 +196,33 @@ const getEvensInRange = function(start, end){
 };
 getEvensInRange(1, 23);
 console.log('________________________________________');
+//Ćwiczenie 9
+const orders = [];
+const ordersFiltered = [];
+const numbersArray = function(start, end){
+  orders.push(start, end);
+  for(let number of orders){
+    if(number == start || number < end - 1){
+      number = number + 1;
+      orders.push(number);
+    }
+  }
+  console.log(orders);
+  return orders;
+};
+
+const filteredArray = function(callback){
+  console.log('Ćwiczenie dziewiąte: ', callback);
+};
+
+const filter = function(array){
+  for(let number of array){
+    if(number%2 === 0)
+      ordersFiltered.push(number);
+  }
+  return ordersFiltered;
+};
+
+
+numbersArray(1, 15);
+filteredArray(filter(orders));
