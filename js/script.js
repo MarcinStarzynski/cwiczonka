@@ -174,3 +174,25 @@ const person = 'aMAnDA dOE';
 console.log('Ćwiczenie siódme: ', formatName(person));
 console.log('________________________________________');
 //Ćwicznie 8
+
+const numbers = [];
+const moduloNumbers = [];
+
+const getEvensInRange = function(start, end){
+  numbers.push(start, end);
+  for(let number of numbers){
+    if(number == start || number < end - 1){
+      number = number + 1;
+      numbers.push(number);
+    }
+  }
+  for(let number of numbers){
+    if(number % 2 == 0){
+      moduloNumbers.push(number);
+    }
+  }
+  console.log('Ćwiczenie ósme: ', moduloNumbers);
+  return moduloNumbers;
+};
+getEvensInRange(1, 23);
+console.log('________________________________________');
